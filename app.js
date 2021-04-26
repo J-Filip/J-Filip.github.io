@@ -2,10 +2,12 @@
 const todoInput=document.querySelector('.todo-input');
 const todoButton=document.querySelector('.todo-button');
 const todoList=document.querySelector('.todo-list');
+const filterTodo = document.querySelector('.filter-todo')
 
 /// Event listeners
 todoButton.addEventListener("click", addTodo);
-todoList.addEventListener("click", deleteCheck)
+todoList.addEventListener("click", deleteCheck);
+filterTodo.addEventListener("click",filterOptions);
 
 /// Functions
 function addTodo(event) {
@@ -50,12 +52,28 @@ function addTodo(event) {
       todo.classList.toggle('completed');     // toggle to another class when clicked so that we can add new css
     }
 }
-
-/*
-    listen delete
-      delete todo
-    listen check
-      color
-    listen todo
-      zoom and expand
-*/
+// we are going through child nodes in select and when option is clicked, it matches expression to case. So if all is clicked - display all todo. If completed - check for todo items with class completed and so on.
+function filterOptions(event) {
+  const todos = todoList.childNodes;
+  todos.forEach(function(todo){
+    switch (event.target.value) {
+      case "all":
+        todo.style.display = "flex";
+        break;
+      case "completed":
+        if(todo.classList.contains("completed")){
+          todo.style.display = "flex";
+        } else{
+          todo.style.display = "none";
+        }
+        break;
+      case "uncompleted":
+        if(!todo.classList.contains("completed")){
+          todo.style.display = "flex";
+       }else{
+         todo.style.display = "none";
+        }
+        break;
+    }
+  });
+}
