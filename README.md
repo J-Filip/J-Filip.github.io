@@ -1,7 +1,7 @@
 <h1>My portfolio - https://j-filip.github.io.
- <p> Portfolio based on various tutorials ideas, implemented for own purposes. 
+ <p> Portfolio based on various tutorials ideas, implemented for own purposes. </p>
 <br>
-<h3> Building in progress...
+ <h3> Building in progress...</h3>
 <br>
 <br>
 Projects included:
@@ -10,5 +10,5 @@ Projects included:
  <li>mejlomat
  <li>intaps_jutro
  <li>crm_pozivi
-  
+ </ol>
   
