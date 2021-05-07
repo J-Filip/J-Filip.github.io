@@ -1,0 +1,215 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box; /*   doesnt add padding to width  */
+}
+
+/* custom properties */
+
+:root {
+   --ff-primary: Roboto, sans-serif;
+    --ff-secondary: Poppins, monospace;
+
+    --fw-reg:300;     /* font weight regular    */
+    --fw-bold:1000;       /* font weight bold    */
+
+    --clr-light:#FFF;    /*  light color   */
+    --clr-dark: #020202;   /*  dark color   */
+    --clr-accent: #ff3366;   /*  colorful color aihia  */
+
+    --fs-h1:3rem;    /*  font sizes for headings   */
+    --fs-h2:2.25rem;
+    --fs-h3:1.25rem;
+    --fs-body:1rem;
+}
+/* Media queries are a popular technique for delivering a tailored style sheet to different devices.  here we changed font size for screens bigger than 800px  */
+@media (min-width:800px) {
+  :root {
+    --fs-h1:4.5rem;    /*  font sizes for headings   */
+    --fs-h2:3.75rem;
+    --fs-h3:1.4rem;
+    --fs-body:1.2rem;
+
+    --img-head:550px;
+    }
+}
+
+/* general styles */
+
+body{
+  background: var(--clr-dark);
+  color: var(--clr-light);
+  margin:0;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  opacity: 75%;    /* for dark theme only */
+}
+img{
+  display: block;
+  max-width:  350px;
+}
+
+section{
+  padding: 3em 1.8em;    /* up-down, left-right */
+}
+
+:focus{
+  opacity: 100%;
+}
+
+/* buttons */
+
+.btn {
+  display: inline-block;
+  background-color: var(--clr-accent);
+  padding: .5em 2.2em;
+  color: var(--clr-light);
+  border-radius: 3px;
+  text-decoration: none; /* removes underline . link also ?? */
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: var(--fw-bold);
+  transition: transform 300ms  ease-in-out;
+}
+
+.btn:hover{
+  transform: scale(1.1) rotateZ(1deg);
+}
+
+/* typography */
+
+h1,
+h2,
+h3 {
+  line-height: 1.3;
+  margin: 0;
+  padding: 0;
+}
+h1{
+  font-size: var(--fs-h1);
+}
+h2{
+  font-size: var(--fs-h2);
+}
+h3{
+  font-size: var(--fs-h3);
+}
+strong{
+  font-weight: var(--fw-bold);
+}
+img{
+  min-width: var(--img-head);
+}
+
+.section__title{
+  margin-bottom: 0.3em;
+  margin-top: 2em;
+}
+
+.section__title--intro {
+  font-weight: var(--fw-reg);
+}
+
+.section__title--intro strong{
+  display: block;
+}
+
+.section__subtitle {
+  margin: 0;
+  font-size: var(--fs-h3);
+}
+
+.section__subtitle--intro,
+.section__subtitle--about {
+  background: var(--clr-accent);
+  font-family: var(--ff-secondary);
+  margin-bottom: .5em;
+  padding: .3em 1.6em;
+}
+
+/* header */
+
+nav, .logo {
+  display: none;
+}
+
+/* Intro section */
+
+.intro {
+  position: relative;    /* An element with position: relative; is positioned relative to its normal position: */
+
+}
+
+@media (min-width:600px) {      /* for bigger than 600px */
+  .intro{
+    display: grid;
+    width: max-content;
+    margin: 0 auto ;
+    grid-column-gap: 3.5em;
+    grid-template-areas:        /* position in grid system.
+                                same as : a b
+                                          a c         */
+            "title img"
+            "subtitle img";
+    grid-template-columns: 2fr max-content;      /* first column takes min space possible. second one takes max possible */
+  }
+.intro__img {
+  grid-area: img;
+  max-width: 350px;
+  filter: brightness(170%);
+}
+.section__subtitle--intro{
+  align-self: start;    /* stop from stretching the box */
+  text-align: center;
+ }
+}
+
+/* My services */
+
+.my-services {
+  background-color: var(--clr-dark);
+  text-align: center;
+}
+
+.services{
+  margin: 4em ;
+}
+
+.service p{
+  opacity: 70%;
+}
+
+.section__title--services {
+  color: var(--clr-accent);
+  position: relative;
+}
+
+.section__title--services::after{
+  content: '';
+  display: block;
+  width: 30%;
+  height: 0.5px;
+  margin: 0.4em auto 1em;
+  background: currentColor;
+  opacity: .5;
+}
+
+@media (min-width:800px) {
+  .services {
+    display: flex;
+    max-width: 1100px;
+    margin: 4em auto;
+  }
+  .service + .service{
+    margin-left: 2.4em;
+  }
+
+  .service::before{
+    content: '.';
+    font-size: 2rem;
+  }
+
+
+}

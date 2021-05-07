@@ -1,24 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width-device-width", initial-scale=1.0>
+  <meta charset="utf-8"> <!--  The HTML5 specification encourages web developers to use the UTF-8 character set, which covers almost all of the characters and symbols in the world! -->
+  <meta name="viewport" content="width=device-width", initial-scale=1.0> <!--  This gives the browser instructions on how to control the page's dimensions and scaling.  The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
+The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">  <!--  The link tag is most often used to link to external style sheets.-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-  <link rel="stylesheet" href="./style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" /> <!-- The integrity attribute allows a browser to check the fetched script to ensure that the code is never loaded if the source has been manipulated. The crossorigin attribute, valid on the audio, img, link, script, and video elements, provides support for CORS, defining how the element handles crossorigin requests,-->
+  <link rel="stylesheet" href="style_index.css">   <!--  my css stylesheet-->
 
-  <title>To-do List</title>
+  <title>Filip Jugkala Portfolio</title>
 </head>
 
   <body>
     <header>
-      <h1>Filip Jugkala - Portfolio</h1>
+      <div class="logo">
+        <img src="logo.png" alt="Cartoon guy coming out of portal">
+      </div>
+      <button class="nav-toggle"aria-label="toggle-navigation">
+        <span class="hamburger"</span>
+      </button> <!--  aria label for accessibility-->
+      <nav class="nav"> <!--  classes used this way for better css reding and congifuration-->
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="#services" class="nav__link">My services</a></li>
+          <li class="nav__item"><a href="#skills" class="nav__link">My skills</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
+          <li class="nav__item"><a href="#projects" class="nav__link">My projects</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <div class="projects">
-      <h2><A HREF="projects.html">See projects -></A></h2>
+  <!-- Intro    -->
+    <section class="intro" id="home"> <!--  id for anchoring  -->
+      <h1 class="section__title section__title--intro">
+         Hi, my name is <strong>Filip Jugkala.</strong>
+    </h1>
+      <p class="section__subtitle section__subtitle--intro">
+        Student | Programmer | Learner
+      </p>
+      <img class="responsive intro__img"src=".\headshot.jpg" alt="black and white headshot of Filip ">
+    </section>
+  <!--  End intro  -->
+
+  <!-- What i do - services -->
+  <section class="my-services" id="service">
+    <h2 class="section__title section__title--services">What I learned by myself?</h2>
+    <div class="services">
+      <div class="service">
+        <h3>Web scraping</h3>
+        <p>Taking information from webpages and making it readable. Or transforming it to something more useful.</p>
+      </div>
+
+      <div class="service">
+        <h3>Automation</h3>
+        <p>Always trying to fing a way to isolate and automate repetitive steps so to focus on real problems. Repetition drains my soul.</p>
+      </div>
+
+      <div class="service">
+        <h3>Wordpress administration</h3>
+        <p>PHP remains to be learned but I have experience setting up wordpress sites and managing content.</p>
+      </div>
     </div>
+
+    <a href="#work"class="btn">My work</a>
+  </section>
+  <!-- End what  -->
+
+  <!-- How i do it -->
+  <section class="my-skills" id="skills">
+    <h2 class="section__title section__title--skills">How?</h2>
+    <div class="services">
+
+      <!-- Service 1 -->
+      <div class="skill">
+        <h3>AutoHotkey</h3>
+        <p></p>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="skill">
+        <h3>Javascript</h3>
+        <p></p>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="skill">
+        <h3>Wordpress</h3>
+        <p></p>
+      </div>
+    </div>
+
+      <a href="#work"class="btn">My work</a>
+  </section>
+  <!-- End how  -->
+
+
+<!-- Projects  -->
+<section class="my-projects" id="projects">
+  <h2 class="section__title section__title--projects"> What?</h2>
+  <p class="section__subtitle"></p>
+  <div class="portfolio">
+    <!--  Project 1  -->
+    <a href="#" class="portfolio __item"> MejloMlat
+      <img src="#" alt="">
+    </a>
+
+    <!--  Project 2  -->
+    <a href="#" class="portfolio __item"> soon...
+      <img src="#" alt="">
+    </a>
+
+    <!--  Project 3  -->
+    <a href="#" class="portfolio __item"> soon...
+      <img src="#" alt="">
+    </a>
+  </div>
+</section>
+<!-- End projects   -->
+
+
+<!-- About me  -->
+<section class="about-me" id="about">
+  <h2 class="section__title section__title--about">Who?</h2>
+  <p class="section__subtitle section__subtitle--about">Looking for a chance to work on bigger projects and immerse myself into coding world.</p>
+  <div class="about-me__body">
+    <p></p>
+    <p></p>
+    <p></p
+    </div>
+    <img src="headshot.jpg" alt="Me wearing a hat">
+  </section>
+  <!-- End about me   -->
+
+
+<footer>
+  <a href="mailto:" class="footer-link">filip.jugkala@yahoo.com</a>
+  <ul class="social-list">
+    <li class="social-list__item "><a href="social-list__link"></a>A</li>
+    <li class="social-list__item "><a href="social-list__link"></a>B</li>
+    <li class="social-list__item "><a href="social-list__link"></a>C</li>
+    <li class="social-list__item "><a href="social-list__link"></a>D</li>
+  </ul>
+</footer>
+
 
     </script>
   </body>
