@@ -1,5 +1,4 @@
-<h1>My resume - https://j-filip.github.io </h1>
-
+<h1>My resume - https://j-filip.github.io/my_resume/
 <br>
 Projects included:
 <ol>
