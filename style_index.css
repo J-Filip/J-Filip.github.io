@@ -361,13 +361,20 @@ margin-top: 0;
 }
 
 .about-me__body p::before{
-  content: '"  ';      /* dots "before" services */
+  content: ' \' ';      /* dots "before" services */
   font-size: 1.4rem;
 }
 
 .about-me img{
   filter: brightness(180%);
 }
+.about-me a{
+  text-decoration: none;
+  font-weight: var(--fw-bold);
+  margin: .5em;
+  color: var(--clr-accent);
+}
+
 
 @media (min-width:650px) {
   .about-me{
@@ -474,17 +481,19 @@ margin-top: 0;
   text-align: center;
   padding: 5em 0 2em;
   font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  opacity: .7;
 }
 
 .footer a{          /* for future links */
   color:inherit;
-  opacity: .6;
   text-decoration: none;
 }
 
 .footer__link:hover,
 .social-list__link:hover{
-  opacity: 0.8;
+  opacity: 0.9;
+  color: var(--clr-light);
 }
 
 .footer__link{
