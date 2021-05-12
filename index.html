@@ -19,15 +19,15 @@ The initial-scale=1.0 part sets the initial zoom level when the page is first lo
         <img src="logo.png" alt="Cartoon guy coming out of portal">
       </div>
       <button class="nav-toggle"aria-label="toggle-navigation">
-        <span class="hamburger"</span>
+        <span class="hamburger"</span><i class="fas fa-bars hamburger__icon"></i>
       </button> <!--  aria label for accessibility-->
       <nav class="nav"> <!--  classes used this way for better css reding and congifuration-->
         <ul class="nav__list">
           <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-          <li class="nav__item"><a href="#services" class="nav__link">My services</a></li>
-          <li class="nav__item"><a href="#skills" class="nav__link">My skills</a></li>
-          <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
-          <li class="nav__item"><a href="#projects" class="nav__link">My projects</a></li>
+          <li class="nav__item"><a href="#what" class="nav__link">What?</a></li>
+          <li class="nav__item"><a href="#when" class="nav__link">When?</a></li>
+          <li class="nav__item"><a href="#how" class="nav__link">How?</a></li>
+          <li class="nav__item"><a href="#who" class="nav__link">Who?</a></li>
         </ul>
       </nav>
     </header>
@@ -40,13 +40,14 @@ The initial-scale=1.0 part sets the initial zoom level when the page is first lo
       <p class="section__subtitle section__subtitle--intro">
         Student | Programmer | Learner
       </p>
-      <img class="responsive intro__img"src=".\headshot.jpg" alt="black and white headshot of Filip ">
+       <img class="responsive intro__img"src=".\logo2.png" alt="black and white cartoon peep ">
     </section>
   <!--  End intro  -->
 
   <!-- What i do - services -->
-  <section class="my-services" id="service">
-    <h2 class="section__title section__title--services">What I learned by myself?</h2>
+  <section class="my-services" id="what">
+    <h2 class="section__title section__title--services">What</h2>
+    <p class="section__subtitle section__subtitle--services">...do I do?</p>
     <div class="services">
       <div class="service">
         <h3>Web scraping</h3>
@@ -55,7 +56,7 @@ The initial-scale=1.0 part sets the initial zoom level when the page is first lo
 
       <div class="service">
         <h3>Automation</h3>
-        <p>Always trying to fing a way to isolate and automate repetitive steps so to focus on real problems. Repetition drains my soul.</p>
+        <p>Always trying to fing a way to isolate and automate repetitive steps so I can focus on more important tasks. Repetition drains my soul.</p>
       </div>
 
       <div class="service">
@@ -64,88 +65,96 @@ The initial-scale=1.0 part sets the initial zoom level when the page is first lo
       </div>
     </div>
 
-    <a href="#work"class="btn">My work</a>
+
   </section>
   <!-- End what  -->
 
-  <!-- How i do it -->
-  <section class="my-skills" id="skills">
-    <h2 class="section__title section__title--skills">How?</h2>
-    <div class="services">
-
-      <!-- Service 1 -->
-      <div class="skill">
-        <h3>AutoHotkey</h3>
-        <p></p>
+  <!-- Projects  -->
+  <section class="my-work" id="when">
+    <h2 class="section__title section__title--work"> When</h2>
+    <p class="section__subtitle section__subtitle--work">...do I use it? </p>
+    <div class="portfolio">
+      <!--  Project 1  -->
+      <div class="portfolio__item ">
+        <h3><a class="portfolio__item--link " href="project_item1.html">MejloMlat</a></h3>
+        <p class="portfolio__item--body"> My first project. GUI mail composer + webscraper using AutoHotkey mixed with Javascript. Made for job purposes.</p>
+        <img class="portfolio__item--img"src="mejlomlat.png"  alt="">
       </div>
 
-      <!-- Service 2 -->
-      <div class="skill">
-        <h3>Javascript</h3>
-        <p></p>
+      <!--  Project 2  -->
+      <div class="portfolio__item ">
+          <h3><a class="portfolio__item--link " href="project_item2.html">Internal web</a></h3>
+        <p class="portfolio__item--body">I was tired of using old internal web. Then I got tired of myself complaining about it. Wordpress came perfectly.</p>
+        <img class="portfolio__item--img"src="kb.png" alt="">
       </div>
 
-      <!-- Service 3 -->
-      <div class="skill">
-        <h3>Wordpress</h3>
-        <p></p>
+      <div class="portfolio__item ">
+          <h3><a class="portfolio__item--link " >Coming soon...</a></h3>
+        <p class="portfolio__item--body"> Few ideas are in the making. Trying not to get stuck in tutorial hell. </p>
+        <img class="portfolio__item--img"src="coming_soon.png" alt="">
       </div>
     </div>
 
-      <a href="#work"class="btn">My work</a>
+    <a href="https://github.com/J-Filip"class="btn"><i class="social-list__source fab fa-github"></i>View source code</a>
+  </section>
+  <!-- End projects   -->
+
+  <!-- How i do it -->
+  <section class="my-services" id="How">
+    <h2 class="section__title section__title--services">How</h2>
+    <p class="section__subtitle section__subtitle--services">...do I build it?</p>
+    <div class="services">
+      <div class="service2">
+        <h3>AutoHotkey</h3>
+        <p>Scripting language for Windows. Started using it for keyboard configuration, ended up building my first project with it.</p>
+      </div>
+
+      <div class="service2">
+        <h3>HTML, CSS, Javascript</h3>
+        <p>Used it for web scraping. Also lives behind this web resume.</p>
+      </div>
+
+      <div class="service2">
+        <h3>Wordpress</h3>
+        <p>From installing and hosting, to designing and publishing. Powerful plugin architecture really makes things easy.</p>
+      </div>
+    </div>
   </section>
   <!-- End how  -->
 
-
-<!-- Projects  -->
-<section class="my-projects" id="projects">
-  <h2 class="section__title section__title--projects"> What?</h2>
-  <p class="section__subtitle"></p>
-  <div class="portfolio">
-    <!--  Project 1  -->
-    <a href="#" class="portfolio __item"> MejloMlat
-      <img src="#" alt="">
-    </a>
-
-    <!--  Project 2  -->
-    <a href="#" class="portfolio __item"> soon...
-      <img src="#" alt="">
-    </a>
-
-    <!--  Project 3  -->
-    <a href="#" class="portfolio __item"> soon...
-      <img src="#" alt="">
-    </a>
-  </div>
-</section>
-<!-- End projects   -->
-
-
-<!-- About me  -->
-<section class="about-me" id="about">
-  <h2 class="section__title section__title--about">Who?</h2>
-  <p class="section__subtitle section__subtitle--about">Looking for a chance to work on bigger projects and immerse myself into coding world.</p>
+<!-- who  -->
+<h2 class="section__title section__title--about" id="who">Who</h2>
+<p class="section__title-sub ">...am I?</p>
+<section class="about-me" >
   <div class="about-me__body">
-    <p></p>
-    <p></p>
-    <p></p
+    <p>graduate of informatics but mostly self-taught.</p>
+    <p>working in CARNET as an IT Help Desk support agent.</p>
+    <p>interests: playing football, philosophy, hiking (37min. Bikča).</p>
     </div>
-    <img src="headshot.jpg" alt="Me wearing a hat">
+    <p class="section__subtitle section__subtitle--about">| am looking for real world experience and a chance to prove myself. </p>
+    <img src="headshot.jpg" alt="Me looking at you" class="about-me__img">
   </section>
   <!-- End about me   -->
 
 
-<footer>
-  <a href="mailto:" class="footer-link">filip.jugkala@yahoo.com</a>
-  <ul class="social-list">
-    <li class="social-list__item "><a href="social-list__link"></a>A</li>
-    <li class="social-list__item "><a href="social-list__link"></a>B</li>
-    <li class="social-list__item "><a href="social-list__link"></a>C</li>
-    <li class="social-list__item "><a href="social-list__link"></a>D</li>
-  </ul>
+<footer class="footer">
+  <a href="mailto:" class="footer__link">filip.jugkala@yahoo.com</a>
+  <a href="tel:+385911376533" class="footer__link">+385 91 1376533</a>
+    <ul class="social-list">
+      <li class="social-list__item ">
+        <a href="https://github.com/J-Filip" class="social-list__link">
+          <i class="fab fa-linkedin-in"> </i> Filip Jugkala
+        </a></li>
+      <li class="social-list__item ">
+        <a href="https://github.com/J-Filip"class="social-list__link">
+          <i class="fab fa-github"> </i> J-Filip
+        </a></li>
+    </ul>
+    <br>
+     <a href="https://github.com/J-Filip/J-Filip.github.io" class="footer__link">VIEW PAGE SOURCE CODE</a>
 </footer>
 
 
-    </script>
+    <script src="./index.js"></script>
   </body>
 </html>
