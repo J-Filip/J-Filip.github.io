@@ -1,25 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width-device-width", initial-scale=1.0>
+  <meta charset="utf-8"> <!--  The HTML5 specification encourages web developers to use the UTF-8 character set, which covers almost all of the characters and symbols in the world! -->
+  <meta name="viewport" content="width=device-width", initial-scale=1.0> <!--  This gives the browser instructions on how to control the page's dimensions and scaling.  The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
+The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">  <!--  The link tag is most often used to link to external style sheets.-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-  <link rel="stylesheet" href="./style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" /> <!-- The integrity attribute allows a browser to check the fetched script to ensure that the code is never loaded if the source has been manipulated. The crossorigin attribute, valid on the audio, img, link, script, and video elements, provides support for CORS, defining how the element handles crossorigin requests,-->
+  <link rel="stylesheet" href="style_index.css">   <!--  my css stylesheet-->
 
-  <title>To-do List</title>
+  <title>Filip Jugkala Portfolio</title>
 </head>
 
   <body>
     <header>
-      <h1>Filip Jugkala - Portfolio</h1>
+      <div class="logo">
+        <img src="logo.png" alt="Cartoon guy coming out of portal">
+      </div>
+      <button class="nav-toggle"aria-label="toggle-navigation">
+        <span class="hamburger"</span><i class="fas fa-bars hamburger__icon"></i>
+      </button> <!--  aria label for accessibility-->
+      <nav class="nav"> <!--  classes used this way for better css reding and congifuration-->
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="#what" class="nav__link">What?</a></li>
+          <li class="nav__item"><a href="#when" class="nav__link">When?</a></li>
+          <li class="nav__item"><a href="#how" class="nav__link">How?</a></li>
+          <li class="nav__item"><a href="#who" class="nav__link">Who?</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <div class="projects">
-      <h2><A HREF="projects.html">See projects -></A></h2>
+  <!-- Intro    -->
+    <section class="intro" id="home"> <!--  id for anchoring  -->
+      <h1 class="section__title section__title--intro">
+         Hi, my name is <strong>Filip Jugkala.</strong>
+    </h1>
+      <p class="section__subtitle section__subtitle--intro">
+        Student | Programmer | Learner
+      </p>
+       <img class="responsive intro__img"src=".\logo2.png" alt="black and white cartoon peep ">
+    </section>
+  <!--  End intro  -->
+
+  <!-- What i do - services -->
+  <section class="my-services" id="what">
+    <h2 class="section__title section__title--services">What</h2>
+    <p class="section__subtitle section__subtitle--services">...do I do?</p>
+    <div class="services">
+      <div class="service">
+        <h3>Web scraping</h3>
+        <p>Taking information from webpages and making it readable. Or transforming it to something more useful.</p>
+      </div>
+
+      <div class="service">
+        <h3>Automation</h3>
+        <p>Always trying to fing a way to isolate and automate repetitive steps so I can focus on more important tasks. Repetition drains my soul.</p>
+      </div>
+
+      <div class="service">
+        <h3>Wordpress administration</h3>
+        <p>PHP remains to be learned but I have experience setting up wordpress sites and managing content.</p>
+      </div>
     </div>
 
-    </script>
+
+  </section>
+  <!-- End what  -->
+
+  <!-- Projects  -->
+  <section class="my-work" id="when">
+    <h2 class="section__title section__title--work"> When</h2>
+    <p class="section__subtitle section__subtitle--work">...do I use it? </p>
+    <div class="portfolio">
+      <!--  Project 1  -->
+      <div class="portfolio__item ">
+        <h3><a class="portfolio__item--link " href="project_item1.html">MejloMlat</a></h3>
+        <p class="portfolio__item--body"> My first project. GUI mail composer + webscraper using AutoHotkey mixed with Javascript. Made for job purposes.</p>
+        <img class="portfolio__item--img"src="mejlomlat.png"  alt="">
+      </div>
+
+      <!--  Project 2  -->
+      <div class="portfolio__item ">
+          <h3><a class="portfolio__item--link " href="project_item2.html">Internal web</a></h3>
+        <p class="portfolio__item--body">I was tired of using old internal web. Then I got tired of myself complaining about it. Wordpress came perfectly.</p>
+        <img class="portfolio__item--img"src="kb.png" alt="">
+      </div>
+
+      <div class="portfolio__item ">
+          <h3><a class="portfolio__item--link " >Coming soon...</a></h3>
+        <p class="portfolio__item--body"> Few ideas are in the making. Trying not to get stuck in tutorial hell. </p>
+        <img class="portfolio__item--img"src="coming_soon.png" alt="">
+      </div>
+    </div>
+
+    <a href="https://github.com/J-Filip"class="btn"><i class="social-list__source fab fa-github"></i>View source code</a>
+  </section>
+  <!-- End projects   -->
+
+  <!-- How i do it -->
+  <section class="my-services" id="How">
+    <h2 class="section__title section__title--services">How</h2>
+    <p class="section__subtitle section__subtitle--services">...do I build it?</p>
+    <div class="services">
+      <div class="service2">
+        <h3>AutoHotkey</h3>
+        <p>Scripting language for Windows. Started using it for keyboard configuration, ended up building my first project with it.</p>
+      </div>
+
+      <div class="service2">
+        <h3>HTML, CSS, Javascript</h3>
+        <p>Used it for web scraping. Also lives behind this web resume.</p>
+      </div>
+
+      <div class="service2">
+        <h3>Wordpress</h3>
+        <p>From installing and hosting, to designing and publishing. Powerful plugin architecture really makes things easy.</p>
+      </div>
+    </div>
+  </section>
+  <!-- End how  -->
+
+<!-- who  -->
+<h2 class="section__title section__title--about" id="who">Who</h2>
+<p class="section__title-sub ">...am I?</p>
+<section class="about-me" >
+  <div class="about-me__body">
+    <p>graduate of informatics but mostly self-taught.</p>
+    <p>working in CARNET as an IT Help Desk support agent.</p>
+    <p>interests: playing football, philosophy, hiking (37min. Bikča).</p>
+    </div>
+    <p class="section__subtitle section__subtitle--about">| am looking for real world experience and a chance to prove myself. </p>
+    <img src="headshot.jpg" alt="Me looking at you" class="about-me__img">
+  </section>
+  <!-- End about me   -->
+
+
+<footer class="footer">
+  <a href="mailto:" class="footer__link">filip.jugkala@yahoo.com</a>
+  <a href="tel:+385911376533" class="footer__link">+385 91 1376533</a>
+    <ul class="social-list">
+      <li class="social-list__item ">
+        <a href="https://github.com/J-Filip" class="social-list__link">
+          <i class="fab fa-linkedin-in"> </i> Filip Jugkala
+        </a></li>
+      <li class="social-list__item ">
+        <a href="https://github.com/J-Filip"class="social-list__link">
+          <i class="fab fa-github"> </i> J-Filip
+        </a></li>
+    </ul>
+    <br>
+     <a href="https://github.com/J-Filip/J-Filip.github.io" class="footer__link">VIEW PAGE SOURCE CODE</a>
+</footer>
+
+
+    <script src="./index.js"></script>
   </body>
 </html>

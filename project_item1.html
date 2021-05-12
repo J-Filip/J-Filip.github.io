@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"> <!--  The HTML5 specification encourages web developers to use the UTF-8 character set, which covers almost all of the characters and symbols in the world! -->
+  <meta name="viewport" content="width=device-width", initial-scale=1.0> <!--  This gives the browser instructions on how to control the page's dimensions and scaling.  The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
+The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">  <!--  The link tag is most often used to link to external style sheets.-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" /> <!-- The integrity attribute allows a browser to check the fetched script to ensure that the code is never loaded if the source has been manipulated. The crossorigin attribute, valid on the audio, img, link, script, and video elements, provides support for CORS, defining how the element handles crossorigin requests,-->
+  <link rel="stylesheet" href="style_index.css">   <!--  my css stylesheet-->
+
+  <title>Filip Jugkala Portfolio</title>
+</head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <img src="logo.png" alt="Cartoon guy coming out of portal">
+      </div>
+      <button class="nav-toggle"aria-label="toggle-navigation">
+        <span class="hamburger"</span><i class="fas fa-bars hamburger__icon"></i>
+      </button> <!--  aria label for accessibility-->
+      <nav class="nav"> <!--  classes used this way for better css reding and congifuration-->
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="index.html#what" class="nav__link">What?</a></li>
+          <li class="nav__item"><a href="index.html#when" class="nav__link">When?</a></li>
+          <li class="nav__item"><a href="index.html#how" class="nav__link">How?</a></li>
+          <li class="nav__item"><a href="index.html#who" class="nav__link">Who?</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Intro    -->
+      <section class="intro" > <!--  id for anchoring  -->
+        <h1 class="section__title section__title--intro">
+            Project name:<strong>MejloMlat.</strong>
+      </h1>
+        <p class="section__subtitle section__subtitle--intro">
+        AutoHotkey | Javascript
+        </p>
+        <img class="responsive intro__img"src="mejlomlat.png" alt="screenshot of my project">
+      </section>
+
+      <div class="portfolio-item-individual">
+        <p>What is MejloMlat you ask? It's a GUI for mail composing and web scraping</p>
+          <p>
+            <strong>MAIL COMPOSER:</strong> As a Help Desk agent huge part of our job is written communication via mail. Most of our mails have the same structure and many answers repeat over time, so we all use notepad and have some .txt file where we keep all of this.
+          </p>
+          <p>
+            My idea was to build a mail composer with all the most common answers built in and ready to compose into final mail. This saves time for agents especially since they don't depend on their own files when changing workstation. It also removes the need for constant copy-pasting and ensures no typoes.
+          </p>
+          <p>
+            <strong>WEB SCRAPER:</strong> We use data from diffrent system and apps and we often have to filter it to get the information we want. Then we have to perform certain tasks depending on the status of the data collected. This includes monitoring a lot of open tabs and windows waiting for changes.
+          </p>
+          <p>
+            Why not do the searching and monitoring automatically if we know how the data is structured? So I came up with a web scraper that searches for specific data and presents it in a more useful way. It injects Javascript code via chrome debug mode and performs actions or returns wanted data.
+          </p>
+          <p>
+            As I mentioned, this was my first project and it's still in development. If other agents show interest I intend to add more answers in the mail composer part and communication with more apps. Also, I would like to write it another languge and get it online for easier access.
+          </p>
+
+          <i class="social-list__link fab fa-github"></i>
+          <a href="https://github.com/J-Filip/ahk_first_app"class="portfolio-item-individual__link social-list__link">VIEW SOURCE CODE</a>
+
+      </div>
+    <!--  End intro  -->
+
+
+
+
+
+    <footer class="footer">
+      <a href="mailto:" class="footer__link">filip.jugkala@yahoo.com</a>
+      <a href="tel:+385911376533" class="footer__link">+385 91 1376533</a>
+        <ul class="social-list">
+          <li class="social-list__item ">
+            <a href="https://github.com/J-Filip" class="social-list__link">
+              <i class="fab fa-linkedin-in"> </i> Filip Jugkala
+            </a></li>
+          <li class="social-list__item ">
+            <a href="https://github.com/J-Filip"class="social-list__link">
+              <i class="fab fa-github"> </i> J-Filip
+            </a></li>
+        </ul>
+        <br>
+         <a href="https://github.com/J-Filip/J-Filip.github.io" class="footer__link">VIEW PAGE SOURCE CODE</a>
+    </footer>
+
+
+    <script src="./index.js"></script>
+  </body>
+</html>
