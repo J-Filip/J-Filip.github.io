@@ -1,47 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8"> <!--  The HTML5 specification encourages web developers to use the UTF-8 character set, which covers almost all of the characters and symbols in the world! -->
-  <meta name="viewport" content="width=device-width", initial-scale=1.0> <!--  This gives the browser instructions on how to control the page's dimensions and scaling.  The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
-The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.-->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">  <!--  The link tag is most often used to link to external style sheets.-->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" /> <!-- The integrity attribute allows a browser to check the fetched script to ensure that the code is never loaded if the source has been manipulated. The crossorigin attribute, valid on the audio, img, link, script, and video elements, provides support for CORS, defining how the element handles crossorigin requests,-->
-  <link rel="stylesheet" href="style_index.css">   <!--  my css stylesheet-->
 
+<head>
+  <meta charset="utf-8">
+  <!--  The HTML5 specification encourages web developers to use the UTF-8 character set, which covers almost all of the characters and symbols in the world! -->
+  <meta name="viewport" content="width=device-width" , initial-scale=1.0>
+  <!--  This gives the browser instructions on how to control the page's dimensions and scaling.  The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
+The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <!--  The link tag is most often used to link to external style sheets.-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
+  <!-- The integrity attribute allows a browser to check the fetched script to ensure that the code is never loaded if the source has been manipulated. The crossorigin attribute, valid on the audio, img, link, script, and video elements, provides support for CORS, defining how the element handles crossorigin requests,-->
+  <link rel="stylesheet" href="style_index.css"> <!--  my css stylesheet-->
+  <!-- leaflet library css   -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
   <title>Filip Jugkala Portfolio</title>
 </head>
 
-  <body>
-    <header>
-      <div class="logo">
-        <img src="logo.png" alt="Cartoon guy coming out of portal">
-      </div>
-      <button class="nav-toggle"aria-label="toggle-navigation">
-        <span class="hamburger"</span><i class="fas fa-bars hamburger__icon"></i>
-      </button> <!--  aria label for accessibility-->
-      <nav class="nav"> <!--  classes used this way for better css reding and congifuration-->
-        <ul class="nav__list">
-          <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-          <li class="nav__item"><a href="#what" class="nav__link">What?</a></li>
-          <li class="nav__item"><a href="#when" class="nav__link">When?</a></li>
-          <li class="nav__item"><a href="#how" class="nav__link">How?</a></li>
-          <li class="nav__item"><a href="#who" class="nav__link">Who?</a></li>
-        </ul>
-      </nav>
-    </header>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Cartoon guy coming out of portal">
+    </div>
+    <button class="nav-toggle" aria-label="toggle-navigation">
+      <span class="hamburger" </span><i class="fas fa-bars hamburger__icon"></i>
+    </button> <!--  aria label for accessibility-->
+    <nav class="nav">
+      <!--  classes used this way for better css reding and congifuration-->
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+        <li class="nav__item"><a href="#what" class="nav__link">What?</a></li>
+        <li class="nav__item"><a href="#when" class="nav__link">When?</a></li>
+        <li class="nav__item"><a href="#how" class="nav__link">How?</a></li>
+        <li class="nav__item"><a href="#who" class="nav__link">Who?</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <!-- Intro    -->
-    <section class="intro" id="home"> <!--  id for anchoring  -->
-      <h1 class="section__title section__title--intro">
-         Hi, my name is <strong>Filip Jugkala.</strong>
+  <section class="intro" id="home">
+    <!--  id for anchoring  -->
+    <h1 class="section__title section__title--intro">
+      Hi, my name is <strong>Filip Jugkala.</strong>
     </h1>
-      <p class="section__subtitle section__subtitle--intro">
-        Student | Programmer | Learner
-      </p>
-       <img class="responsive intro__img"src=".\logo2.png" alt="black and white cartoon peep ">
-    </section>
+    <p class="section__subtitle section__subtitle--intro">
+      Student | Programmer | Learner
+    </p>
+    <img class="responsive intro__img" src=".\logo2.png" alt="black and white cartoon peep ">
+  </section>
   <!--  End intro  -->
 
   <!-- What i do - services -->
@@ -56,7 +68,8 @@ The initial-scale=1.0 part sets the initial zoom level when the page is first lo
 
       <div class="service">
         <h3>Automation</h3>
-        <p>Always trying to fing a way to isolate and automate repetitive steps so I can focus on more important tasks. Repetition drains my soul.</p>
+        <p>Always trying to fing a way to isolate and automate repetitive steps so I can focus on more important tasks.
+          Repetition drains my soul.</p>
       </div>
 
       <div class="service">
@@ -77,25 +90,28 @@ The initial-scale=1.0 part sets the initial zoom level when the page is first lo
       <!--  Project 1  -->
       <div class="portfolio__item ">
         <h3><a class="portfolio__item--link " href="project_item1.html">MejloMlat</a></h3>
-        <p class="portfolio__item--body"> My first project. GUI mail composer + webscraper using AutoHotkey mixed with Javascript. Made for job purposes.</p>
-        <img class="portfolio__item--img"src="mejlomlat.png"  alt="">
+        <p class="portfolio__item--body"> My first project. GUI mail composer + webscraper using AutoHotkey mixed with
+          Javascript. Made for job purposes.</p>
+        <img class="portfolio__item--img" src="mejlomlat.png" alt="">
       </div>
 
       <!--  Project 2  -->
       <div class="portfolio__item ">
-          <h3><a class="portfolio__item--link " href="project_item2.html">Internal web</a></h3>
-        <p class="portfolio__item--body">I was tired of using old internal web. Then I got tired of myself complaining about it. Wordpress came perfectly.</p>
-        <img class="portfolio__item--img"src="kb.png" alt="">
+        <h3><a class="portfolio__item--link " href="project_item2.html">Internal web</a></h3>
+        <p class="portfolio__item--body">I was tired of using old internal web. Then I got tired of myself complaining
+          about it. Wordpress came perfectly.</p>
+        <img class="portfolio__item--img" src="kb.png" alt="">
       </div>
 
       <div class="portfolio__item ">
-          <h3><a class="portfolio__item--link " >Coming soon...</a></h3>
+        <h3><a class="portfolio__item--link ">Coming soon...</a></h3>
         <p class="portfolio__item--body"> Few ideas are in the making. Trying not to get stuck in tutorial hell. </p>
-        <img class="portfolio__item--img"src="coming_soon.png" alt="">
+        <img class="portfolio__item--img" src="coming_soon.png" alt="">
       </div>
     </div>
 
-    <a href="https://github.com/J-Filip"class="btn"><i class="social-list__source fab fa-github"></i>View source code</a>
+    <a href="https://github.com/J-Filip" class="btn"><i class="social-list__source fab fa-github"></i>View source
+      code</a>
   </section>
   <!-- End projects   -->
 
@@ -106,7 +122,8 @@ The initial-scale=1.0 part sets the initial zoom level when the page is first lo
     <div class="services">
       <div class="service2">
         <h3>AutoHotkey</h3>
-        <p>Scripting language for Windows. Started using it for keyboard configuration, ended up building my first project with it.</p>
+        <p>Scripting language for Windows. Started using it for keyboard configuration, ended up building my first
+          project with it.</p>
       </div>
 
       <div class="service2">
@@ -116,55 +133,115 @@ The initial-scale=1.0 part sets the initial zoom level when the page is first lo
 
       <div class="service2">
         <h3>Wordpress</h3>
-        <p>From installing and hosting, to designing and publishing. Powerful plugin architecture really makes things easy.</p>
+        <p>From installing and hosting, to designing and publishing. Powerful plugin architecture really makes things
+          easy.</p>
       </div>
     </div>
   </section>
   <!-- End how  -->
 
-<!-- who  -->
-<h2 class="section__title section__title--about" id="who">Who</h2>
-<p class="section__title-sub ">...am I?</p>
-<section class="about-me" >
-  <div class="about-me__body">
-    <h3>Info stuff :</h3>
-    <p>graduate of informatics but mostly self-taught.</p>
-    <p>Help Desk Technician at CARNET.</p>
-    <p>huge fan of self-improvment mindset.</p>
+  <!-- who  -->
+  <h2 class="section__title section__title--about" id="who">Who</h2>
+  <p class="section__title-sub ">...am I?</p>
+  <section class="about-me">
+    <div class="about-me__body">
+      <h3>Info stuff :</h3>
+      <p>graduate of informatics but mostly self-taught.</p>
+      <p>Help Desk Technician at CARNET.</p>
+      <p>huge fan of self-improvment mindset.</p>
 
 
-    <br>
-    <h3>Fun stuff :</h3>
-    <p>won tickets to UEFA Euro 2016 in a prize game for looking like Modrić. <a  href="modric.jpg"> SEE PHOTO</a> </p>
-    <p>love playing football, philosophy, Balašević' music, lake Jarun, hiking (37min. Bikča).</p>
-    <p>COVID-19 vaccinated.</p>
+      <br>
+      <h3>Fun stuff :</h3>
+      <p>won tickets to UEFA Euro 2016 in a prize game for looking like Modrić. <a href="modric.jpg"> SEE PHOTO</a> </p>
+      <p>love playing football, philosophy, Balašević' music, lake Jarun, hiking (37min. Bikča).</p>
+      <p>COVID-19 vaccinated.</p>
 
 
     </div>
-    <p class="section__subtitle section__subtitle--about">| am looking for internship or an entry-level job and a chance to prove myself. </p>
+    <p class="section__subtitle section__subtitle--about">| am looking for internship or an entry-level job and a chance
+      to prove myself. </p>
     <img src="headshot.jpg" alt="Me looking at you" class="about-me__img">
   </section>
   <!-- End about me   -->
 
+  <!-- my location   -->
+  <section class="my-services" id="where">
+    <h2 class="section__title section__title--services">Where</h2>
+    <p class="section__subtitle section__subtitle--services">...can You find me?</p>
+    <div class="location_map">
+      <div id="mapid"></div>
+    </div>
 
-<footer class="footer">
-  <a href="mailto:filip.jugkala@yahoo.com" class="footer__link">filip.jugkala@yahoo.com</a>
-  <a href="tel:+385911376533" class="footer__link">+385 91 1376533</a>
+
+  </section>
+  <footer class="footer">
+    <a href="mailto:filip.jugkala@yahoo.com" class="footer__link">filip.jugkala@yahoo.com</a>
+    <a href="tel:+385911376533" class="footer__link">+385 91 1376533</a>
     <ul class="social-list">
       <li class="social-list__item ">
         <a href="https://www.linkedin.com/in/filip-jugkala-23a40391/" class="social-list__link">
           <i class="fab fa-linkedin-in"> </i> Filip Jugkala
-        </a></li>
+        </a>
+      </li>
       <li class="social-list__item ">
-        <a href="https://github.com/J-Filip"class="social-list__link">
+        <a href="https://github.com/J-Filip" class="social-list__link">
           <i class="fab fa-github"> </i> J-Filip
-        </a></li>
+        </a>
+      </li>
     </ul>
     <br>
-     <a href="https://github.com/J-Filip/J-Filip.github.io" class="footer__link">VIEW PAGE SOURCE CODE</a>
-</footer>
+    <a href="https://github.com/J-Filip/J-Filip.github.io" class="footer__link">VIEW PAGE SOURCE CODE</a>
+  </footer>
 
+  <!--  my js  -->
+  <script src="./index.js"> </script>
+  <!-- leaflet library js   -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin="">
+    </script>
 
-    <script src="./index.js"></script>
-  </body>
+  <script>
+    const mymap = L.map('mapid').setView([45.8140, 15.9780], 12);
+    var logoMe = L.icon({
+      iconUrl: 'logo.png',
+      iconSize: [40, 60],
+      iconAnchor: [25, 40],
+      popupAnchor: [20, -25]
+
+    });
+    var markerZg = L.marker([45.8132, 15.9769], {
+      opacity: 0.8
+    }).addTo(mymap);
+    markerZg.bindPopup("Zagreb Main Square.");
+
+    var markerMe = L.marker([45.78650, 15.914900], {
+      icon: logoMe,
+      opacity: 0.8
+    }).addTo(mymap);
+    markerMe.bindPopup("I am usually around here somewhere.");
+
+    var circle2 = L.circle([45.783922, 15.909992], {
+      color: 'red',
+      fillColor: '#m51',
+      fillOpacity: 0.6,
+      radius: 1300
+    }).addTo(mymap);
+
+    markerMe.on('click', function () {
+      mymap.setView([45.78650, 15.914900]);
+      ;
+    });
+    markerZg.on('click', function () {
+      mymap.setView([45.8132, 15.9769]);
+      ;
+    });
+    L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/toner/{z}/{x}/{y}.png', {
+      attribution: 'http://www.openstreetmap.org/copyright"',
+    }).addTo(mymap);
+  </script>
+
+</body>
+
 </html>

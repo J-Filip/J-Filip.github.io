@@ -474,6 +474,23 @@ margin-top: 0;
   }
 }
 
+/*  my location   */
+
+#mapid {
+  height: 450px; 
+ }
+
+ .location_map{
+  max-width: 1000px;
+  margin: auto;
+  opacity: 0.5;
+ }
+ .location_map:hover{
+  opacity: 1;
+ }
+
+
+
 /* footer */
 
 .footer{        /* to have everything in classes */
