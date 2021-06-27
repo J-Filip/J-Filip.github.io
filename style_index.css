@@ -268,6 +268,7 @@ nav{
   max-width: var(--img-max);
   margin: 0  auto;
   padding-top: 3em;
+  padding-left: 2em;
 }
 .section__title--intro{
   grid-area: title;
@@ -361,7 +362,7 @@ margin-top: 0;
 }
 
 .about-me__body p::before{
-  content: ' \' ';      /* dots "before" services */
+  content: ' - ';      /* dots "before" services */
   font-size: 1.4rem;
 }
 

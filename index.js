@@ -15,13 +15,5 @@ navLinks.forEach (link =>(
   document.body.classList.remove("nav-open");
 })
 ));
-// FETCH PARAGRAPH
 
-async function catchPar(p){
-  const response = await fetch(p);
-  const blob = await response.blob();
-  //console.log(blob);
-  document.querySelector('.portfolio-item-individual').innerHTML = await blob.text();
-};
-catchPar('project_desc1.html');
 
