@@ -26,7 +26,8 @@ The initial-scale=1.0 part sets the initial zoom level when the page is first lo
 <body>
   <header>
     <div class="logo">
-      <img src="logo.png" alt="Cartoon guy coming out of portal">
+      <a href="#home" ><img  src="logo.png" alt="Cartoon guy coming out of portal"> </a> 
+      
     </div>
     <button class="nav-toggle" aria-label="toggle-navigation">
       <span class="hamburger" </span><i class="fas fa-bars hamburger__icon"></i>
@@ -50,13 +51,45 @@ The initial-scale=1.0 part sets the initial zoom level when the page is first lo
       Hi, my name is <strong>Filip Jugkala.</strong>
     </h1>
     <p class="section__subtitle section__subtitle--intro">
-      Student | Programmer | Learner
+      Student | Developer | Learner
     </p>
     <img class="responsive intro__img" src=".\logo2.png" alt="black and white cartoon peep ">
   </section>
   <!--  End intro  -->
+  
+    <!-- How i do it -->
+    <section class="my-services" id="how">
+      <h2 class="section__title section__title--services">How</h2>
+      <p class="section__subtitle section__subtitle--services">...do I build it?</p>
+      <div class="services">
+        <div class="service2">
+          <h3>HTML, CSS, Javascript</h3>
+          <p>Used it for web scraping. Also lives behind this web resume.</p>
+        </div>
+        <div class="service2">
+          <h3>Node.js</h3>
+          <p>First backend language. Since I already use JS, it seemed like an easy transition from frontend to backend.</p>
+        </div>
+        <div class="service2">
+          <h3>AutoHotkey</h3>
+          <p>Scripting language for Windows. Started using it for keyboard configuration, ended up building my first
+            project with it.</p>
+        </div>
+  
+  
+        <div class="service2">
+          <h3>Wordpress</h3>
+          
+          <p>From installing and hosting, to designing and publishing. Powerful plugin architecture really makes things
+            easy.</p>
+        </div> 
+      </div>
+    </section>
+    
+    <!-- End how  -->
 
   <!-- What i do - services -->
+  <!-- 
   <section class="my-services" id="what">
     <h2 class="section__title section__title--services">What</h2>
     <p class="section__subtitle section__subtitle--services">...do I do?</p>
@@ -78,21 +111,19 @@ The initial-scale=1.0 part sets the initial zoom level when the page is first lo
       </div>
     </div>
 
-
   </section>
   <!-- End what  -->
-
+  
   <!-- Projects  -->
   <section class="my-work" id="when">
     <h2 class="section__title section__title--work"> When</h2>
     <p class="section__subtitle section__subtitle--work">...do I use it? </p>
     <div class="portfolio">
-      <!--  Project 1  -->
+      <!--  Project 4  -->
       <div class="portfolio__item ">
-        <h3><a class="portfolio__item--link " href="project_item1.html">MejloMlat</a></h3>
-        <p class="portfolio__item--body"> My first project. GUI mail composer + webscraper using AutoHotkey mixed with
-          JavaScript. Made for job purposes.</p>
-        <img class="portfolio__item--img" src="mejlomlat.png" alt="">
+        <h3><a class="portfolio__item--link " href="project_item4.html">Map Weather</a></h3>
+        <p class="portfolio__item--body"> FInd out Your geolocation and get weather and air quality data for the location. You can also see where others have checked-in on the map.</p>
+        <img class="portfolio__item--img" src="map-weather.png" alt="">
       </div>
       
       <!--  Project 3  -->
@@ -100,6 +131,13 @@ The initial-scale=1.0 part sets the initial zoom level when the page is first lo
         <h3><a class="portfolio__item--link " href="project_item3.html">Chrome extension - CN Helper</a></h3>
         <p class="portfolio__item--body">A simple app for boosting productivity for Helpdesk agents. It provides better UX with better visual cues,  autocomplete options and school search via pop-up.</p>
         <img class="portfolio__item--img" src="cn-helper.png" alt="">
+      </div>
+      <!--  Project 1  -->
+      <div class="portfolio__item ">
+        <h3><a class="portfolio__item--link " href="project_item1.html">MejloMlat</a></h3>
+        <p class="portfolio__item--body"> My first project. GUI mail composer + webscraper using AutoHotkey mixed with
+          JavaScript. Made for job purposes.</p>
+        <img class="portfolio__item--img" src="mejlomlat.png" alt="">
       </div>
       <!--  Project 2  -->
       <div class="portfolio__item ">
@@ -111,8 +149,8 @@ The initial-scale=1.0 part sets the initial zoom level when the page is first lo
 
 
       <div class="portfolio__item ">
-        <h3><a class="portfolio__item--link ">Coming soon...</a></h3>
-        <p class="portfolio__item--body"> Few ideas are in the making. Trying not to get stuck in tutorial hell. </p>
+        <h3><a class="portfolio__item--link" href="https://github.com/J-Filip/random_stuff">In the making...</a></h3>
+        <p class="portfolio__item--body"> Projects and ideas I am still working on. </p>
         <img class="portfolio__item--img" src="coming_soon.png" alt="">
       </div>
     </div>
@@ -122,51 +160,28 @@ The initial-scale=1.0 part sets the initial zoom level when the page is first lo
   </section>
   <!-- End projects   -->
 
-  <!-- How i do it -->
-  <section class="my-services" id="how">
-    <h2 class="section__title section__title--services">How</h2>
-    <p class="section__subtitle section__subtitle--services">...do I build it?</p>
-    <div class="services">
-      <div class="service2">
-        <h3>AutoHotkey</h3>
-        <p>Scripting language for Windows. Started using it for keyboard configuration, ended up building my first
-          project with it.</p>
-      </div>
 
-      <div class="service2">
-        <h3>HTML, CSS, Javascript</h3>
-        <p>Used it for web scraping. Also lives behind this web resume.</p>
-      </div>
-
-      <div class="service2">
-        <h3>Wordpress</h3>
-        <p>From installing and hosting, to designing and publishing. Powerful plugin architecture really makes things
-          easy.</p>
-      </div>
-    </div>
-  </section>
-  <!-- End how  -->
 
   <!-- who  -->
   <h2 class="section__title section__title--about" id="who">Who</h2>
   <p class="section__title-sub ">...am I?</p>
   <section class="about-me">
     <div class="about-me__body">
-      <h3>Info stuff :</h3>
+      <h3>Info stuff </h3>
       <p>graduate of informatics but mostly self-taught.</p>
       <p>Help Desk Technician at CARNET.</p>
       <p>huge fan of self-improvment mindset.</p>
 
 
       <br>
-      <h3>Fun stuff :</h3>
+      <h3>Fun stuff </h3>
       <p>won tickets to UEFA Euro 2016 in a prize game for looking like Modrić. <a href="modric.jpg"> SEE PHOTO</a> </p>
       <p>love playing football, philosophy, Balašević' music, lake Jarun, hiking (37min. Bikča).</p>
       <p>COVID-19 vaccinated.</p>
 
 
     </div>
-    <p class="section__subtitle section__subtitle--about">| am looking for internship or an entry-level job and a chance
+    <p class="section__subtitle section__subtitle--about">| am looking for an internship or an entry-level job and a chance
       to prove myself. </p>
     <img src="headshot.jpg" alt="Me looking at you" class="about-me__img">
   </section>

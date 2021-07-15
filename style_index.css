@@ -362,7 +362,7 @@ margin-top: 0;
 }
 
 .about-me__body p::before{
-  content: ' - ';      /* dots "before" services */
+  content: ' • ';      /* dots "before" services */
   font-size: 1.4rem;
 }
 
@@ -553,7 +553,7 @@ margin-top: 0;
   max-width: 1000px;
   padding: 2em;
   margin: 0 auto;
-
+  
 }
 .portfolio-item-individual {
   max-width: 800px;
@@ -564,5 +564,6 @@ margin-top: 0;
 .portfolio-item-individual__link{
   color: var(--clr-accent);
   font-size: 1.3rem;
-  margin: 1em;
+  margin: 0.3em;
+  font-weight: 600;
 }
