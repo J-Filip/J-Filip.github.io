@@ -38,7 +38,7 @@ The initial-scale=1.0 part sets the initial zoom level when the page is first lo
             Project name:<strong>Map Weather.</strong>
       </h1>
         <p class="section__subtitle section__subtitle--intro">
-        NeDB / Express / Node.js / Heroku
+        PostgreSQL / Express / Node.js / Heroku
         </p>
         <img class="responsive intro__img"src="map_weather.png" alt="screenshot of my project">
       </section>
@@ -56,8 +56,9 @@ The initial-scale=1.0 part sets the initial zoom level when the page is first lo
           </p>
           <p>
             What's really happening behind all this?
-            When app is loaded, user is asked for permission to use his geolocation. If geolocation available, send POST request to server with variables latitude and longitude. Server fetches weather and airquality APIs with user's coordinates and returns a response to client. We make DOM changes with this data and send another POST request to server with data to be stored in th database. 
-            When Logs is clicked, client sends GET request to server asking for all the data from database.  For each entry from database we create a DIV element and add a marker with a pop-up to a Leaflet map.  
+            When app is loaded, user is asked for permission to use his geolocation. If geolocation available, user can type in his nickname and press Check-in button that sends POST request to server with variables latitude and longitude. Server fetches weather and airquality APIs with user's coordinates and returns a response to the client. We make DOM changes with this data and send another POST request to server with data to be stored in the database. 
+            When All Logs is pressed, client sends GET request to server asking for the last 20 rows from the database.  For each entry from database we create a DIV element and add a marker with a pop-up to a Leaflet map.
+            When Croatia logs is pressed, same process is happening with postgres database but in this case we SEND user's country as route parameter to an endpoint, where we return only database rows where Country value is HR.  
           </p>        
           <i class="social-list__link fab fa-github"></i>
     <a href="https://github.com/J-Filip/map_weather" class="portfolio-item-individual__link social-list__link">VIEW SOURCE CODE </a>
