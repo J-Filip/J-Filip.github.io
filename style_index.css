@@ -146,6 +146,24 @@ strong{
   padding: .3em 1.6em;
 }
 
+figure img{
+  transition:
+    transform 350ms cubic-bezier(.6,0,.6,0),
+    opacity 450ms linear;
+}
+
+figure img:hover{
+  transform: scale(2.4);
+  opacity: 1;
+}
+
+figcaption {
+  display: block;
+  text-align: center;
+  font-size: .9rem;
+}
+
+
 /* header */
 
 header{
@@ -474,6 +492,10 @@ margin-top: 0;
    grid-area: body;
   }
 }
+.portfolio_date{
+  font-size: 2.1rem;
+
+}
 
 /*  my location   */
 
@@ -555,11 +577,12 @@ margin-top: 0;
   margin: 0 auto;
   
 }
-.portfolio-item-individual {
-  max-width: 800px;
-  line-height: 1.8;
-  margin-left: auto;
-  margin-right: auto;
+
+.portfolio-item-individual{
+  max-width: 1000px;
+  padding: 2em;
+  margin: 0 auto;
+  
 }
 .portfolio-item-individual__link{
   color: var(--clr-accent);
@@ -567,3 +590,4 @@ margin-top: 0;
   margin: 0.3em;
   font-weight: 600;
 }
+
