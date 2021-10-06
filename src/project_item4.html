@@ -25,7 +25,7 @@ The initial-scale=1.0 part sets the initial zoom level when the page is first lo
   <body>
     <header>
       <div class="logo">
-        <a href="index.html " ><img  src="logo.png" alt="Cartoon guy coming out of portal"> </a> 
+        <a href="index.html " ><img  src="../assets/logo.png" alt="Cartoon guy coming out of portal"> </a> 
       </div>
       <button class="nav-toggle"aria-label="toggle-navigation">
         <span class="hamburger"</span><i class="fas fa-bars hamburger__icon"></i>
@@ -44,38 +44,36 @@ The initial-scale=1.0 part sets the initial zoom level when the page is first lo
     <!-- Intro    -->
       <section class="intro" > <!--  id for anchoring  -->
         <h1 class="section__title section__title--intro">
-            Project name:<strong>Chrome extension - CN Helper.</strong>
+            Project name:<strong>Map Weather.</strong>
       </h1>
         <p class="section__subtitle section__subtitle--intro">
-        JavaScript 
+        PostgreSQL / Express / Node.js / Heroku
         </p>
-        <img class="responsive intro__img"src="cn-helper.png" alt="screenshot of my project">
+        <img class="responsive intro__img"src="../assets/map_weather.png" alt="screenshot of my project">
       </section>
 
       <div class="portfolio-item-individual">
-        <a href="https://chrome.google.com/webstore/detail/cn-helper/dnfcangbhomhdaediofpmkldaomofkbh?hl=en&authuser=0" class="portfolio-item-individual__link social-list__link">LINK</a>
-          <p>
-
-             With 2 years experience working as Helpdesk Technician, I started to notice a lot of tedious and unproductive steps that agents did every day during their shift. This included clicking, scrolling, opening new tabs and other. So I wanted to eliminate that.
+        <a href="https://map-weather-app.herokuapp.com/" class="portfolio-item-individual__link social-list__link">LINK</a>
+        <p>
+          07/2021 UPDATE - added PostgreSQL database 
+        </p>  
+        <p>
+            Modified project based on a tutorial by @joeyklee. My first dive into Node.js and backend development. The point wasn't to make another weather app but to learn to deal with APIs and fetching data.
           </p>
           <p>
-            While my first app <a class="portfolio__item--link " href="project_item1.html">MejloMlat</a> tried something simmilar, I needed to find a way to make it more accessible so agents don't have to install every time they change computers. Knowing that all of us are logged in using our Google accounts, I decided to try and build a new Chrome extension that can be installed in only a few clicks. 
+           I set up a server using express framework and used fetch API to get data from two APIs - weather and air quality. One of them required API key so I learned how to store private API keys using environment variables. Also, I deployed my web app to Heroku cloud platform with GitHub integration. 
           </p>
           <p>
-             The basic principle is this: script is executed depending on the web pages the browser visits. It mostly uses DOM manipulation to change the look of the page by inserting extra elements or presenting it in more user-friendly way. It also uses autocomplete and input checking where needed. 
-          </p>
-          <figure >
-            <img src="cn-helper-stats.png" alt="cn helper stats">
-            <figcaption>Fig.1 - Stats show that July 14 holds the record with 70 users.</figcaption>
-          </figure>
-          <p>
-            The extension is now used by most of us (Fig.1), and agents give valuable feedback that helps me improve the extension. My goal is to make it even more robust by integrating it with more apps and to provide richer features. 
-          </p>
+            What's really happening behind all this?
+            When app is loaded, user is asked for permission to use his geolocation. If geolocation available, user can type in his nickname and press Check-in button that sends POST request to server with variables latitude and longitude. Server fetches weather and airquality APIs with user's coordinates and returns a response to the client. We make DOM changes with this data and send another POST request to server with data to be stored in the database. 
+            When All Logs is pressed, client sends GET request to server asking for the last 20 rows from the database.  For each entry from database we create a DIV element and add a marker with a pop-up to a Leaflet map.
+            When Croatia logs is pressed, same process is happening with postgres database but in this case we SEND user's country as route parameter to an endpoint, where we return only database rows where Country value is HR.  
+          </p>        
           <i class="social-list__link fab fa-github"></i>
-    <a href="https://github.com/J-Filip/random_stuff/tree/main/cn_helper_0.0.5" class="portfolio-item-individual__link social-list__link">VIEW
-      SOURCE CODE</a>
+    <a href="https://github.com/J-Filip/map_weather" class="portfolio-item-individual__link social-list__link">VIEW SOURCE CODE </a>
 
       </div>
+      
     <!--  End intro  -->
 
     <footer class="footer">
