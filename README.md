@@ -1,3 +1,5 @@
-# My resume
+# My old portfolio
 
-[Check me out and get in touch!](https://j-filip.github.io/my_resume)
+❌ [Old portfolio](https://j-filip.github.io/my_resume)
+
+✔️ [New portfolio](https://filip-jugkala.com) 
